@@ -26,6 +26,43 @@
             overflow-x: hidden;
         }
 
+        /* Splash Screen */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #004080;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            transition: opacity 1s ease-in-out;
+        }
+
+        #splash-screen h1 {
+            font-size: 3rem;
+            text-align: center;
+            animation: fadeInText 3s ease-in-out forwards;
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Splash Screen Disappearance */
+        .hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
         /* Single Hero Section */
         header {
             height: 100vh;
@@ -39,6 +76,7 @@
             position: relative;
             z-index: 1;
             overflow: hidden;
+            padding: 0 20px;
         }
 
         header::before {
@@ -54,13 +92,16 @@
 
         header h1 {
             font-size: 4rem;
-            animation: fadeInDown 2s ease-in-out forwards;
+            margin-bottom: 10px;
+            z-index: 2;
+            position: relative;
         }
 
         header p {
             font-size: 1.5rem;
             margin: 1rem 0;
-            animation: fadeInUp 2s ease-in-out forwards;
+            z-index: 2;
+            position: relative;
         }
 
         header .cta-buttons {
@@ -82,17 +123,6 @@
 
         header .cta-buttons a:hover {
             background-color: #e00058;
-        }
-
-        @keyframes fadeInDown {
-            0% {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         @keyframes fadeInUp {
@@ -252,6 +282,9 @@
     </style>
 </head>
 <body>
+    <div id="splash-screen">
+        <h1>Change. Your. Business.</h1>
+    </div>
     <header>
         <h1>Welcome to ATFI</h1>
         <p>Your trusted partner in IT consultancy</p>
@@ -280,14 +313,4 @@
             </div>
             <div class="service-item">
                 <h3>System Support</h3>
-                <p>We provide reliable system support to ensure your IT infrastructure runs smoothly and effectively.</p>
-            </div>
-        </div>
-    </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>If you have any questions or would like to discuss your IT consultancy needs, please get in touch with us:</p>
-        <a href="mailto:dan@atfi.uk" class="contact-link" aria-label="Email Dan">dan@atfi.uk</a>
-        <a href="https://wa.me/447557035393" target="_blank" class="whatsapp-button" aria-label="Contact via WhatsApp">WhatsApp</a>
-    </section>
-    <footer>
+               
