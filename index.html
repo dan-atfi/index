@@ -14,8 +14,10 @@
             overflow: hidden;
             cursor: url('https://cdn.pixabay.com/photo/2020/07/01/12/58/finger-pointing-5358937_960_720.png'), auto; /* Custom cursor */
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            text-align: center;
         }
 
         .background-animation {
@@ -39,7 +41,6 @@
         }
 
         .container {
-            text-align: center;
             z-index: 1;
             animation: fadeIn 2s ease-in-out;
         }
@@ -71,16 +72,24 @@
             animation: fadeIn 3s ease-in-out;
         }
 
-        a {
-            text-decoration: none;
+        .email-button {
+            margin-top: 20px;
+            padding: 10px 20px;
             font-size: 1.2rem;
-            color: #00ff00; /* Matching the tech green theme */
+            color: #000;
+            background-color: #00ff00; /* Matching the tech green theme */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
             display: inline-block;
+            transition: background-color 0.3s, transform 0.2s;
             animation: pulse 5s infinite, blur 6s infinite;
         }
 
-        a:hover {
-            color: #0f0;
+        .email-button:hover {
+            background-color: #0f0;
+            transform: scale(1.05);
         }
 
         /* Keyframe animations */
@@ -130,7 +139,7 @@
     </div>
 
     <div class="container">
-        <h1>Welcome to atfiii</h1>
+        <h1>Welcome to atfi</h1>
         <p>Your trusted partner in IT consultancy, specialising in CRM, business, and system support.</p>
         
         <div class="services">
@@ -138,9 +147,10 @@
             <div class="service-item">• Business Process Optimisation</div>
             <div class="service-item">• System Integration & Maintenance</div>
         </div>
-    </div>
 
-    <a href="mailto:dan@atfi.uk">Email: dan@atfi.uk</a>
+        <!-- Centralised Email Button -->
+        <a href="mailto:dan@atfi.uk" class="email-button">email: dan@atfi.uk</a>
+    </div>
 
 </body>
 </html>
