@@ -6,7 +6,7 @@
     <meta name="description" content="atfi IT Consultancy offers expert CRM, business, and system support.">
     <meta property="og:title" content="atfi - IT Consultancy">
     <meta property="og:description" content="Your trusted partner in IT consultancy, specialising in CRM, business, and system support.">
-    <meta property="og:image" content="URL to an image">
+    <meta property="og:image" content="your-image-url.jpg">
     <meta property="og:url" content="https://yourwebsiteurl.com">
     <title>atfi - IT Consultancy</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -144,8 +144,12 @@
             color: #fff;
         }
 
-        a:hover, .whatsapp-button:hover {
+        a:hover {
             background-color: #0056b3;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #218838;
         }
 
         footer {
@@ -153,7 +157,7 @@
             color: #fff;
             text-align: center;
             padding: 1rem;
-            position: absolute;
+            position: relative;
             bottom: 0;
             width: 100%;
         }
@@ -206,8 +210,8 @@
         <section id="contact">
             <h2>Contact Us</h2>
             <p>If you have any questions or would like to discuss your IT consultancy needs, please get in touch with us:</p>
-            <a href="mailto:dan@atfi.uk" class="contact-link">dan@atfi.uk</a>
-            <a href="whatsapp://send?phone=+1234567890" target="_blank" class="whatsapp-button">WhatsApp</a>
+            <a href="mailto:dan@atfi.uk" class="contact-link" aria-label="Email Dan">dan@atfi.uk</a>
+            <a href="whatsapp://send?phone=+1234567890" target="_blank" class="whatsapp-button" aria-label="Contact via WhatsApp">WhatsApp</a>
         </section>
     </main>
     <footer>
