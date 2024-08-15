@@ -26,10 +26,10 @@
             overflow-x: hidden;
         }
 
-        /* Hero Section with GIF Background */
+        /* Hero Section */
         header {
             height: 100vh;
-            background: url('https://i.pinimg.com/originals/62/7f/fa/627ffa8faacfee2c52110c63541eb926.gif') no-repeat center center/cover;
+            background: no-repeat center center/cover;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -193,6 +193,21 @@
             }
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Array of GIF URLs
+            const gifs = [
+                'https://i.pinimg.com/originals/62/7f/fa/627ffa8faacfee2c52110c63541eb926.gif',
+                'https://gifdb.com/images/high/glowing-stars-on-blue-background-pw5c3x4got7s3di5.webp'
+            ];
+
+            // Randomly select one GIF
+            const selectedGif = gifs[Math.floor(Math.random() * gifs.length)];
+
+            // Apply the selected GIF as the background image
+            document.querySelector('header').style.backgroundImage = `url(${selectedGif})`;
+        });
+    </script>
 </head>
 <body>
     <header>
