@@ -26,9 +26,10 @@
             overflow-x: hidden;
         }
 
-        /* Hero Sections */
+        /* Single Hero Section */
         header {
             height: 100vh;
+            background: url('https://via.placeholder.com/1920x1080/004080/ffffff?text=IT+Consultancy') no-repeat center center/cover;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -38,18 +39,6 @@
             position: relative;
             z-index: 1;
             overflow: hidden;
-        }
-
-        header:nth-child(1) {
-            background: url('https://via.placeholder.com/1920x1080/004080/ffffff?text=IT+Consultancy') no-repeat center center/cover;
-        }
-
-        header:nth-child(2) {
-            background: url('https://via.placeholder.com/1920x1080/202020/ffffff?text=Network+Security') no-repeat center center/cover;
-        }
-
-        header:nth-child(3) {
-            background: url('https://via.placeholder.com/1920x1080/000000/ffffff?text=Cloud+Services') no-repeat center center/cover;
         }
 
         header::before {
@@ -271,20 +260,6 @@
             <a href="#contact">Contact Us</a>
         </div>
     </header>
-    <header>
-        <h1>Network Security</h1>
-        <p>Protecting your data with top-notch security solutions</p>
-        <div class="cta-buttons">
-            <a href="#services">Learn More</a>
-        </div>
-    </header>
-    <header>
-        <h1>Cloud Services</h1>
-        <p>Scalable and secure cloud solutions for your business</p>
-        <div class="cta-buttons">
-            <a href="#services">Explore Cloud</a>
-        </div>
-    </header>
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
@@ -298,3 +273,21 @@
             <div class="service-item">
                 <h3>CRM Solutions</h3>
                 <p>We offer comprehensive CRM solutions to streamline your business operations and enhance customer relationships.</p>
+            </div>
+            <div class="service-item">
+                <h3>Business Support</h3>
+                <p>Our business support services help you overcome operational challenges and achieve your goals efficiently.</p>
+            </div>
+            <div class="service-item">
+                <h3>System Support</h3>
+                <p>We provide reliable system support to ensure your IT infrastructure runs smoothly and effectively.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to discuss your IT consultancy needs, please get in touch with us:</p>
+        <a href="mailto:dan@atfi.uk" class="contact-link" aria-label="Email Dan">dan@atfi.uk</a>
+        <a href="https://wa.me/447557035393" target="_blank" class="whatsapp-button" aria-label="Contact via WhatsApp">WhatsApp</a>
+    </section>
+    <footer>
