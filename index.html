@@ -3,65 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="atfi IT Consultancy offers expert CRM, business, and system support.">
-    <meta property="og:title" content="atfi - IT Consultancy">
-    <meta property="og:description" content="Your trusted partner in IT consultancy, specialising in CRM, business, and system support.">
-    <meta property="og:image" content="your-image-url.jpg">
-    <meta property="og:url" content="https://yourwebsiteurl.com">
-    <title>atfi - IT Consultancy</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Your Event Partner for Unforgettable Experiences">
+    <title>Your Event Company</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* General styles */
         body {
-            font-family: 'Open Sans', sans-serif;
             margin: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background-color: #f5f5f5;
+            font-family: 'Roboto', sans-serif;
             color: #333;
-            align-items: center;
-            justify-content: center;
+            background-color: #f5f5f5;
         }
 
         header {
-            background: url('hero-image.jpg') no-repeat center center/cover;
-            background-color: #004080; /* Fallback color */
-            color: #fff;
+            background: url('your-hero-image.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 4rem 2rem;
-            position: relative;
+            color: white;
         }
 
-        .header-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .logo h1 {
-            color: #ffffff; /* Updated text color for better visibility */
-            font-size: 3rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        header h1 {
+            font-size: 4rem;
             margin: 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Added text shadow for better contrast */
         }
 
-        .logo p {
-            color: #ffffff; /* Updated text color for better visibility */
-            font-size: 1.2rem;
-            margin: 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Added text shadow for better contrast */
+        header p {
+            font-size: 1.5rem;
+            margin: 1rem 0;
         }
 
         nav {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+            text-align: center;
+            position: fixed;
             width: 100%;
-            background-color: #004080;
+            top: 0;
+            z-index: 1000;
         }
 
-        .nav-menu {
+        nav ul {
             list-style: none;
             margin: 0;
             padding: 0;
@@ -69,137 +52,112 @@
             justify-content: center;
         }
 
-        .nav-menu > li {
-            position: relative;
+        nav ul li {
+            margin: 0 1rem;
         }
 
-        .nav-menu > li > a {
-            display: block;
-            padding: 1rem 2rem;
-            color: #fff;
+        nav ul li a {
+            color: white;
             text-decoration: none;
-            transition: background-color 0.3s ease;
+            font-weight: bold;
+            transition: color 0.3s;
         }
 
-        .nav-menu > li > a:hover {
-            background-color: #0056b3;
-        }
-
-        main {
-            text-align: center;
-            max-width: 800px;
-            padding: 2rem;
+        nav ul li a:hover {
+            color: #ff4081;
         }
 
         section {
             padding: 4rem 2rem;
-            margin: 2rem 0;
-            background-color: #ffffff;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+
+        .event-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .event-item {
+            background-color: white;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin: 1rem 0;
-        }
-
-        a, .whatsapp-button {
-            display: inline-block;
+            overflow: hidden;
+            max-width: 300px;
             text-align: center;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-            margin: 0.5rem;
         }
 
-        a {
-            color: #007bff;
+        .event-item img {
+            width: 100%;
+            height: auto;
         }
 
-        .whatsapp-button {
-            background-color: #28a745;
-            color: #fff;
+        .event-item h3 {
+            margin: 1rem 0;
+            font-size: 1.5rem;
         }
 
-        a:hover {
-            background-color: #0056b3;
-        }
-
-        .whatsapp-button:hover {
-            background-color: #218838;
+        .event-item p {
+            padding: 0 1rem 1rem;
         }
 
         footer {
-            background-color: #004080;
-            color: #fff;
+            background-color: #333;
+            color: white;
             text-align: center;
-            padding: 1rem;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            padding: 2rem 1rem;
         }
 
-        /* Media query for smaller screens */
-        @media (max-width: 768px) {
-            .nav-menu {
-                flex-direction: column;
-            }
-
-            main {
-                padding: 1rem;
-            }
+        footer p {
+            margin: 0;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <div class="logo">
-                <h1>atfi</h1>
-                <p>IT Consultancy</p>
-            </div>
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li> <!-- Removed the dropdown menu -->
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+        <div>
+            <h1>Your Event Company</h1>
+            <p>Unforgettable Experiences Await</p>
         </div>
     </header>
-    <main>
-        <section id="home">
-            <p>Welcome to atfi, your trusted partner in IT consultancy. We provide top-notch CRM, business, and system support tailored to your needs.</p>
-        </section>
-        <section id="services">
-            <h2>Our Services</h2>
-            <p><strong>CRM Solutions:</strong> We offer comprehensive CRM solutions to streamline your business operations and enhance customer relationships.</p>
-            <p><strong>Business Support:</strong> Our business support services help you overcome operational challenges and achieve your goals efficiently.</p>
-            <p><strong>System Support:</strong> We provide reliable system support to ensure your IT infrastructure runs smoothly and effectively.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or would like to discuss your IT consultancy needs, please get in touch with us:</p>
-            <a href="mailto:dan@atfi.uk" class="contact-link" aria-label="Email Dan">dan@atfi.uk</a>
-            <a href="https://wa.me/447557035393" target="_blank" class="whatsapp-button" aria-label="Contact via WhatsApp">WhatsApp</a>
-        </section>
-    </main>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="events">
+        <h2>Upcoming Events</h2>
+        <div class="event-list">
+            <div class="event-item">
+                <img src="event1.jpg" alt="Event 1">
+                <h3>Event 1</h3>
+                <p>Details about Event 1.</p>
+            </div>
+            <div class="event-item">
+                <img src="event2.jpg" alt="Event 2">
+                <h3>Event 2</h3>
+                <p>Details about Event 2.</p>
+            </div>
+            <div class="event-item">
+                <img src="event3.jpg" alt="Event 3">
+                <h3>Event 3</h3>
+                <p>Details about Event 3.</p>
+            </div>
+        </div>
+    </section>
     <footer>
-        <p>&copy; 2024 atfi</p>
+        <p>&copy; 2024 Your Event Company. All rights reserved.</p>
     </footer>
-    <script>
-        // Optional JavaScript for smooth scrolling
-        document.querySelectorAll('.nav-menu a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
