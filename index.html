@@ -40,7 +40,6 @@
             z-index: 1;
             overflow: hidden;
             padding: 0 20px;
-            transition: opacity 1s ease-in-out;
         }
 
         header::before {
@@ -54,29 +53,38 @@
             z-index: -1;
         }
 
-        .splash-message {
-            font-size: 3rem;
-            animation: fadeInText 1.5s ease-in-out forwards;
+        header h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            z-index: 2;
+            position: relative;
         }
 
-        header h1, header p, .cta-buttons {
-            display: none;
+        header p {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            z-index: 2;
+            position: relative;
         }
 
-        @keyframes fadeInText {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+        header .cta-buttons {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
         }
 
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        header .cta-buttons a {
+            padding: 1rem 2rem;
+            background-color: #ff4081;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        header .cta-buttons a:hover {
+            background-color: #e00058;
         }
 
         nav {
@@ -113,9 +121,6 @@
             max-width: 1000px;
             margin: 0 auto;
             text-align: center;
-            opacity: 0;
-            transform: translateY(50px);
-            animation: fadeInSection 1.5s ease-in-out forwards;
         }
 
         section h2 {
@@ -128,13 +133,6 @@
             font-size: 1.2rem;
             line-height: 1.6;
             color: #555;
-        }
-
-        @keyframes fadeInSection {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         /* Services Section */
@@ -176,34 +174,6 @@
             margin: 0;
         }
 
-        /* Easter Egg - Hidden Message */
-        #easter-egg {
-            display: none;
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            background-color: #333;
-            color: white;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            z-index: 1001;
-        }
-
-        #easter-egg button {
-            background-color: #ff4081;
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        #easter-egg button:hover {
-            background-color: #e00058;
-        }
-
         /* Media Queries */
         @media (max-width: 768px) {
             header h1 {
@@ -226,7 +196,6 @@
 </head>
 <body>
     <header>
-        <div class="splash-message">Change. Your. Business.</div>
         <h1>Welcome to ATFI</h1>
         <p>Your trusted partner in IT consultancy</p>
         <div class="cta-buttons">
@@ -267,11 +236,5 @@
     <footer>
         <p>&copy; 2024 atfi</p>
     </footer>
-
-    <script>
-        // JavaScript to transition from splash message to hero content
-        setTimeout(() => {
-            document.querySelector('.splash-message').style.display = 'none';
-            document.querySelector('header h1').style.display = 'block';
-            document.querySelector('header p').style.display = 'block';
-            document.querySelector('.cta-buttons').style
+</body>
+</html>
