@@ -26,43 +26,6 @@
             overflow-x: hidden;
         }
 
-        /* Splash Screen */
-        #splash-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #004080;
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 10000;
-            transition: opacity 1s ease-in-out;
-        }
-
-        #splash-screen h1 {
-            font-size: 3rem;
-            text-align: center;
-            animation: fadeInText 3s ease-in-out forwards;
-        }
-
-        @keyframes fadeInText {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        /* Splash Screen Disappearance */
-        .hidden {
-            opacity: 0;
-            visibility: hidden;
-        }
-
         /* Single Hero Section */
         header {
             height: 100vh;
@@ -77,6 +40,7 @@
             z-index: 1;
             overflow: hidden;
             padding: 0 20px;
+            transition: opacity 1s ease-in-out;
         }
 
         header::before {
@@ -90,39 +54,18 @@
             z-index: -1;
         }
 
-        header h1 {
-            font-size: 4rem;
-            margin-bottom: 10px;
-            z-index: 2;
-            position: relative;
+        .splash-message {
+            font-size: 3rem;
+            animation: fadeInText 1.5s ease-in-out forwards;
         }
 
-        header p {
-            font-size: 1.5rem;
-            margin: 1rem 0;
-            z-index: 2;
-            position: relative;
+        header h1, header p, .cta-buttons {
+            display: none;
         }
 
-        header .cta-buttons {
-            margin-top: 2rem;
-            display: flex;
-            gap: 1rem;
-            animation: fadeInUp 2.5s ease-in-out forwards;
-        }
-
-        header .cta-buttons a {
-            padding: 1rem 2rem;
-            background-color: #ff4081;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            font-weight: bold;
-        }
-
-        header .cta-buttons a:hover {
-            background-color: #e00058;
+        @keyframes fadeInText {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
 
         @keyframes fadeInUp {
@@ -282,10 +225,8 @@
     </style>
 </head>
 <body>
-    <div id="splash-screen">
-        <h1>Change. Your. Business.</h1>
-    </div>
     <header>
+        <div class="splash-message">Change. Your. Business.</div>
         <h1>Welcome to ATFI</h1>
         <p>Your trusted partner in IT consultancy</p>
         <div class="cta-buttons">
@@ -311,4 +252,26 @@
                 <h3>Business Support</h3>
                 <p>Our business support services help you overcome operational challenges and achieve your goals efficiently.</p>
             </div>
-           
+            <div class="service-item">
+                <h3>System Support</h3>
+                <p>We provide reliable system support to ensure your IT infrastructure runs smoothly and effectively.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to discuss your IT consultancy needs, please get in touch with us:</p>
+        <a href="mailto:dan@atfi.uk" class="contact-link" aria-label="Email Dan">dan@atfi.uk</a>
+        <a href="https://wa.me/447557035393" target="_blank" class="whatsapp-button" aria-label="Contact via WhatsApp">WhatsApp</a>
+    </section>
+    <footer>
+        <p>&copy; 2024 atfi</p>
+    </footer>
+
+    <script>
+        // JavaScript to transition from splash message to hero content
+        setTimeout(() => {
+            document.querySelector('.splash-message').style.display = 'none';
+            document.querySelector('header h1').style.display = 'block';
+            document.querySelector('header p').style.display = 'block';
+            document.querySelector('.cta-buttons').style
