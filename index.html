@@ -29,7 +29,7 @@
 
         header {
             background: url('hero-image.jpg') no-repeat center center/cover;
-            background-color: #004080; /* Fallback color if image doesn't load */
+            background-color: #004080; /* Fallback color */
             color: #fff;
             text-align: center;
             padding: 4rem 2rem;
@@ -41,8 +41,21 @@
             z-index: 1;
         }
 
-        .logo h1, .logo p {
-            color: #004080; /* Ensure visibility of logo and subtitle text */
+        .logo h1 {
+            color: #004080; /* Ensure the text is visible */
+            font-size: 3rem; /* Explicit font size */
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow for better visibility */
+        }
+
+        .logo p {
+            color: #004080; /* Ensure the subtitle is visible */
+            font-size: 1.2rem; /* Explicit font size */
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
         }
 
         nav {
@@ -208,7 +221,7 @@
             <h2>Contact Us</h2>
             <p>If you have any questions or would like to discuss your IT consultancy needs, please get in touch with us:</p>
             <a href="mailto:dan@atfi.uk" class="contact-link" aria-label="Email Dan">dan@atfi.uk</a>
-            <a href="whatsapp://send?phone=+447711210603" target="_blank" class="whatsapp-button" aria-label="Contact via WhatsApp">WhatsApp</a>
+            <a href="whatsapp://send?phone=+447557035393" target="_blank" class="whatsapp-button" aria-label="Contact via WhatsApp">WhatsApp</a>
         </section>
     </main>
     <footer>
